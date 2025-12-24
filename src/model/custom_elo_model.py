@@ -112,17 +112,3 @@ class TennisEloModel:
         print("Đã tính xong Elo cho toàn bộ lịch sử.")
         return df_new
 
-if __name__ == "__main__":
-    # Giả lập dữ liệu
-    data = pd.DataFrame({
-        'tourney_date': pd.to_datetime(['20200101', '20200102']),
-        'match_num': [1, 2],
-        'p1_id': [101, 102],
-        'p2_id': [102, 101],
-        'surface': ['Hard', 'Hard'],
-        'target': [1, 0]
-    })
-    
-    model = TennisEloModel()
-    res = model.fit_transform(data)
-    print(res[['p1_id', 'p2_id', 'p1_elo', 'p2_elo', 'target']])
