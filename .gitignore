@@ -8,3 +8,9 @@ wheels/
 
 # Virtual environments
 .venv
+visualize_data.py
+plots
+eda_exploration.py
+custom_elo_model.py
+processed_atp_data.csv
+model_results.csv
